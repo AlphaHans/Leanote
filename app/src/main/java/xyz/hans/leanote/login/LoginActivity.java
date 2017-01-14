@@ -1,7 +1,6 @@
 package xyz.hans.leanote.login;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.EditText;
 
 import java.util.HashMap;
@@ -15,8 +14,9 @@ import retrofit2.Response;
 import xyz.hans.leanote.R;
 import xyz.hans.leanote.R2;
 import xyz.hans.leanote.base.BaseTitleBarActivity;
-import xyz.hans.leanote.common.RetrofitClient;
+import xyz.hans.leanote.common.net.RetrofitClient;
 import xyz.hans.leanote.common.sp.UserManager;
+import xyz.hans.leanote.note.NotesActivity;
 
 public class LoginActivity extends BaseTitleBarActivity {
     private static final String TAG = "LoginActivity";
@@ -56,9 +56,10 @@ public class LoginActivity extends BaseTitleBarActivity {
             @Override
             public void onResponse(Call<UserInfoBean> call, Response<UserInfoBean> response) {
                 UserInfoBean bean = response.body();
-                if (bean.isOk())
+                if (bean.isOk()) {
                     UserManager.getInstance(LoginActivity.this).saveUserInfo(bean);
-                Log.d(TAG, bean.toString());
+                    NotesActivity.startActivity(LoginActivity.this);
+                }
                 showTitle();
             }
 
