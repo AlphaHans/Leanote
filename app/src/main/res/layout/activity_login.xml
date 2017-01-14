@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/part_title_bar" />
+
+    <include layout="@layout/part_divide_region" />
+
+    <include layout="@layout/part_divide" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/CommonItemLeftTextView"
+            android:text="@string/login_text_account" />
+
+        <EditText
+            android:id="@+id/login_et_account"
+            style="@style/LoginEditTextStyle"
+            android:text="lzh_hans@outlook.com"
+            android:hint="@string/login_hint_account" />
+    </LinearLayout>
+
+
+    <include layout="@layout/part_divide" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/CommonItemLeftTextView"
+            android:text="@string/login_text_password" />
+
+        <EditText
+            android:text="xhzxlizehan"
+            android:id="@+id/login_et_password"
+            style="@style/LoginEditTextStyle"
+            android:hint="@string/login_hint_password"
+            android:inputType="textPassword" />
+    </LinearLayout>
+
+
+    <include layout="@layout/part_divide" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/divide_region_gray" />
+</LinearLayout>

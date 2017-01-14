@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#E1E1E1</color>
+    <color name="colorPrimaryDark">#E1E1E1</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#ffffff</color>
+    <!--分割线颜色-->
+    <color name="divide_hint_gray">#E0E0E0</color>
+    <!--分割区的区域-->
+    <color name="divide_region_gray">#F3F4F7</color>
+    <color name="title_bar_text_color">#000000</color>
+</resources>
